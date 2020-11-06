@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+	*{margin:0; padding:0; text-decoration:none; list-style: none;}
+	section { width: 550px; }
+	.float { float: left; }
+	.block { width: 200px; height: 200px;}
+	.pink { background: #ee3e64; }
+	.blue { background: #44accf; }
+	.green { background: #b7d84b; }
+	.orange { background: #E2A741; }
+	.black{background: rgba(0,0,0,0.4);}
+	
+	.clearfix:before, .clearfix:after {display: block; content: '';line-height: 0;}
+	.clearfix:after {clear: both;}
+	.overflow{overflow: auto;}
+	.clear { clear: both; }
+</style>
+</head>
+<body>
+	<!-- float으로 영역깨짐(그린영역 사라짐)-->
+	<section class="black">
+	    <div class="block pink float"></div>
+	    <div class="block blue float"></div>
+	    <div class="block green"></div>
+	    <div class="block orange"></div>
+	</section>
+	<!-- 해결1.전체영역 float(단점: 일일이 float적용,가변적브라우저 사용 불리)-->
+	<section class="black float">
+	    <div class="block pink float"></div>
+	    <div class="block blue float"></div>
+	    <div class="block green float"></div>
+	    <div class="block orange float"></div>
+	</section>
+	<!-- 해결2.overflow(단점: 잘리거나 스크롤바 유발)-->
+	<section class="black overflow">
+	    <div class="block pink float"></div>
+	    <div class="block blue float"></div>
+	    <div class="block green float"></div>
+	    <div class="block orange float"></div>
+	</section>
+	<!-- 해결3.clearfix사용(추천) -->
+	<section class="black clearfix">
+	    <div class="block pink float"></div>
+	    <div class="block blue float"></div>
+	    <div class="block green float"></div>
+	    <div class="block orange float"></div>
+	</section>
+	
+</body>
+</html>
