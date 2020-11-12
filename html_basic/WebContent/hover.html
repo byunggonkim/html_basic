@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+	*{margin:0; padding:0; list-style: none;}
+	ul li {position:relative; float:left; overflow:hidden;}
+	ul li img{width:200px; float:left;}
+	ul li div {
+		position: absolute; width:200px; height:200px; background-color:rgba(0,0,0,0.6);
+		transition: all 0.2s ease-in-out; z-index:10; opacity:0; top:200px;
+	}
+	ul li:hover div{transform:translateY(-200px); opacity:1;}
+	ul li div h2{margin-top:50px;}
+	ul li div h2, ul li div p {padding:5px; text-align:center; color:#eee;}
+</style>
+</head>
+<body>
+	<section>
+		<ul>
+			<li>
+				<img src="./img/menu.svg"/>
+				<div>
+					<h2>햄버거 메뉴</h2>
+					<p>상품: 햄버거메뉴</p>
+					<p>가격: 5000원</p>
+				</div>
+			</li>
+		</ul>
+	</section>
+</body>
+</html>
